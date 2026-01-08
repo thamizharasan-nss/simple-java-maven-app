@@ -1,0 +1,13 @@
+name: simple java application 
+
+on: 
+  push:
+     branches: [ master ]
+
+jobs:
+   my-first-job:
+       runs-on: ubuntu-latest
+       steps:
+       - name: simple step 
+         run: echo "This is sample java application"
+      
