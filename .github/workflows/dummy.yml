@@ -22,5 +22,8 @@ jobs:
 
        - name: check java is installed or not 
          run: java -version 
+
+       - name: mvn
+         run: mvn clean package 
           
       
