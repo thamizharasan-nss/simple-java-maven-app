@@ -4,10 +4,23 @@ on:
   push:
      branches: [ master ]
 
+  pull_request:
+     branches: [ main, 'feature/*' ]
+     
+  workflow_dispatch: 
+     
+
 jobs:
    my-first-job:
        runs-on: ubuntu-latest
        steps:
        - name: simple step 
          run: echo "This is sample java application"
+
+       - name: checkout the repo 
+         uses: actions/checkout@v6.0.1
+
+       - name: check java is installed or not 
+         run: java -version 
+          
       
